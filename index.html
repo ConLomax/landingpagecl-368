@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #F4EBD0; 
+      color: #5C4033; 
+    }
+
+    /* Header styling */
+    #header {
+      background-color: #AE8F61;
+      color: #F4EBD0; 
+      padding: 0.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    /* Navbar styling */
+    #nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin: 0.5rem 0;
+      
+    }
+
+    #header-img {
+      max-width: 50px;
+    }
+
+    #brand-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #F4EBD0; 
+      margin-left: 10px; 
+    }
+
+    .nav-links-container {
+      display: flex;
+      gap: 20px; 
+      margin-left: 40px; 
+    }
+
+    .nav-link {
+      color: #F4EBD0;
+      text-decoration: none;
+      padding: 0.3rem 0.8rem;
+      border: 1px solid #F4EBD0;
+      border-radius: 5px;
+      background-color: transparent;
+    }
+
+    .nav-link:hover {
+      background-color: #F4EBD0;
+      color: #5C4033;
+    }
+
+    /* Sections */
+    section {
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    #video {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Form styling */
+    #form {
+      margin: 2rem auto;
+      padding: 2rem;
+      max-width: 400px;
+      border: 1px solid #AE8F61;
+      border-radius: 5px;
+      background-color: #FFF6E5; 
+    }
+
+    #email {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #AE8F61;
+      border-radius: 5px;
+      background-color: #FAF3DD; 
+      color: #5C4033;
+    }
+
+    #submit {
+      padding: 0.5rem 1rem;
+      background-color: #AE8F61;
+      color: #F4EBD0;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #submit:hover {
+      background-color: #8B6B47;
+    }
+
+    /* Images styling */
+    .about-images {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px;
+    margin-top: 1rem;
+  }
+
+  .about-images img {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+    /* Media query */
+    @media (max-width: 600px) {
+      #nav-bar {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links-container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0; 
+      }
+
+      .nav-link {
+        margin: 5px 0;
+      }
+    }
+    
+/* Bread item container */
+.bread-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; 
+}
+
+/* Bread label styling */
+.bread-label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #5C4033; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.5rem; 
+  text-align: center;
+}
+
+/* Purchase button styling */
+.purchase-btn {
+  padding: 0.5rem 1rem;
+  background-color: #333; 
+  color: #F4EBD0; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.purchase-btn:hover {
+  background-color: #555; 
+  color: white;
+}
+
+     /* Footer Styling */
+    footer {
+      background-color: #AE8F61;
+      color: #F4EBD0;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    footer a {
+      color: #F4EBD0;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    #intro {
+    background-color: #AE8F61; 
+    color: #F4EBD0; 
+    text-align: center;
+    padding: 3rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin: 2rem auto; 
+    max-width: 1200px; 
+  }
+
+  #intro .intro-content {
+    max-width: 45%; 
+    
+  }
+
+  #intro h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #intro p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  #intro iframe {
+    max-width: 50%;
+    border-radius: 5px;
+  }
+
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    #intro {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #intro iframe {
+      max-width: 100%;
+      margin-top: 1rem;
+    }
+
+    #intro .intro-content {
+      max-width: 100%;
+      
+    }
+  }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <nav id="nav-bar">
+      <img src="https://cdn-icons-png.flaticon.com/512/883/883663.png" alt="Product Logo" id="header-img">
+      <span id="brand-name">Venusian Breads</span>
+      <div class="nav-links-container">
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#features" class="nav-link">Our Loaves</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="intro">
+  <div class="intro-content">
+    <h2>Bread? We got it!</h2>
+    <p>We know that you have that craving. Let us satisfy it.</p>
+  </div>
+  <iframe id="video" width="500" height="315" src="https://www.youtube.com/embed/GEfWShkO4Ac?list=PLllSXcM0SpZwWArIjnSG9ZW1Zy4QTC0aJ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+    <section id="about">
+      <h2>About Our Product</h2>
+     
+      <p>Our Bread is sourced from real unaltered Bread farms on Venus, where we use only 45% pesticides. Harnessing Venus's unmatched atmospheric pressure and carbon dioxide-rich clouds, our advanced bio-engineering transforms this planet into a celestial bakery, producing bread loaves with unmatched softness and flavor. Each slice is infused with the warmth of Venus's volcanic soil and the boundless energy of the Sun, creating a taste that's truly out of this world. With Venusian bread, Earth will never go hungry again—a future of abundance and flavor awaits!</p>
+      <p>Venusian loaves aren’t just baked; they’re born in the heart of a planet where extreme conditions mold each loaf into a unique marvel. The planet’s high-pressure atmosphere and constant volcanic activity provide a perfect environment for our special bread-making process, resulting in loaves with flavors you won't find anywhere else. These loaves are crafted from grains that have adapted to Venus’s harsh terrain, absorbing the rich minerals from the soil and the radiant warmth of its sun. Each slice tells the story of resilience, capturing the essence of a world where only the strongest survive—and the most delicious bread is born.</p>
+      
+    </section>
+
+    <section id="features">
+  <h2>Bring out the Loaves</h2>
+  <p>Here are some of our fantastical Loaves!</p>
+  <div class="about-images">
+    <div class="bread-item">
+      <img src="https://healthynibblesandbits.com/wp-content/uploads/2019/12/Milk-Bread-FF2.jpg" alt="Soft Milk Bread">
+      <span class="bread-label">Venusian Soft Milk Loaf</span>
+      <button class="purchase-btn">Purchase</button>
+    </div>
+    <div class="bread-item">
+      <img src="https://www.carolinescooking.com/wp-content/uploads/2021/01/Japanese-milk-bread-featured-pic-sq-500x500.jpg" alt="Japanese Milk Bread">
+      <span class="bread-label">Solar-Infused Japanese Loaf</span>
+      <button class="purchase-btn">Purchase</button>
+    </div>
+    <div class="bread-item">
+      <img src="https://www.allrecipes.com/thmb/3Bhpg3W6sjCn0VTQ_yXLUyHr-3k=/0x512/filters:no_upscale():max_bytes(150000):strip_icc()/6788-amish-white-bread-DDMFS-4x3-6faa1e552bdb4f6eabdd7791e59b3c84.jpg" alt="Amish White Bread">
+      <span class="bread-label">Amish Venus Harvest</span>
+      <button class="purchase-btn">Purchase</button>
+    </div>
+    <div class="bread-item">
+      <img src="https://www.melskitchencafe.com/wp-content/uploads/french-bread2-500x375.jpg" alt="French Bread">
+      <span class="bread-label">Crater-Crusted Delight</span>
+      <button class="purchase-btn">Purchase</button>
+    </div>
+    <div class="bread-item">
+      <img src="https://www.recipetineats.com/tachyon/2023/06/Cheese-bread-main-photos_7a.jpg" alt="Cheese Bread">
+      <span class="bread-label">Tachyon Cheese Loaf</span>
+      <button class="purchase-btn">Purchase</button>
+    </div>
+    <div class="bread-item">
+      <img src="https://www.halfbakedharvest.com/wp-content/uploads/2024/01/The-Best-easiest-No-Knead-Bread-1.jpg" alt="No-Knead Bread">
+      <span class="bread-label">No-Knead Venusian Bliss</span>
+      <button class="purchase-btn">Purchase</button>
+    </div>
+    <div class="bread-item">
+      <img src="https://mojo.generalmills.com/api/public/content/QXEBhJ0m8UuUGPQYjlwvBw_webp_base.webp?v=dfec29ab&t=191ddcab8d1c415fa10fa00a14351227" alt="Artisan Bread">
+      <span class="bread-label">Artisan Crater Bread</span>
+      <button class="purchase-btn">Purchase</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <section id="contact">
+      <h2>Give into the bread. Sign up for a free loaf of your choice!</h2>
+      <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+        <input name="email" type="email" id="email" placeholder="Enter your email" required>
+        <input type="submit" id="submit" value="Subscribe">
+      </form>
+    </section>
+  </main>
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Venusian Breads. All Rights Reserved.</p>
+    <p>
+      <a href="#privacy-policy">Privacy Policy</a> | 
+      <a href="#terms-of-service">Terms of Service</a>
+    </p>
+  </footer>
+</body>
+</html>
